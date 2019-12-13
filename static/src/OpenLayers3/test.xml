@@ -1,0 +1,44 @@
+<Transaction xmlns="http://www.opengis.net/wfs"
+             service="WFS" version="1.1.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd">
+    <Update typeName="feature:selected" xmlns:feature="http://localhost:8080/GreateWall">
+        <Property>
+            <Name>geom</Name>
+            <Value>
+                <Point xmlns="http://www.opengis.net/gml">
+                    <pos>98.23608 39.84169</pos>
+                </Point>
+            </Value>
+        </Property>
+        <Property>
+            <Name>id编号</Name>
+            <Value>93</Value>
+        </Property>
+        <Property>
+            <Name>图片路</Name>
+            <Value>H:/长城墙体超低空航拍图像 源文件/长城监测图像精选/嘉峪关野麻湾/嘉峪关野麻湾长城1段/六合一/DJI_0008.JPG</Value>
+        </Property>
+        <Property>
+            <Name>初始拍</Name>
+            <Value>2019-05-09Z</Value>
+        </Property>
+        <Property>
+            <Name>y</Name>
+            <Value>39.84169</Value>
+        </Property>
+        <Property>
+            <Name>x</Name>
+            <Value>98.23608</Value>
+        </Property>
+        <Property>
+            <Name>高度</Name>
+            <Value>1685.502</Value>
+        </Property>
+        <Property>
+            <Name>保存状</Name>
+            <Value>123</Value>
+        </Property>
+        <Property>
+            <Name>建筑类</Name>
+        </Property><Filter xmlns="http://www.opengis.net/ogc"><FeatureId fid="selected.735"/></Filter></Update></Transaction>

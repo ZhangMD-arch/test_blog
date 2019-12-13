@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <script src="../src/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../src/v6.0.1/css/ol.css" type="text/css">
+    <script src="../src/v6.0.1/build/ol.js" type="text/javascript"></script>
+    <script src="../src/jquery.jqprint-0.3.js" type="text/javascript"></script>
+    <link href="../src/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="../src/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/dataset_06_01_header.css" type="text/css">
+    <link rel="stylesheet" href="./css/base_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_01_mark.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_01_left.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_right_tool.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_map.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_timeLine.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_01_dialog.css" type="text/css">
+    <link rel="stylesheet" href="./css/dataset_06_01_register.css" type="text/css">
+</head>
+<body>
+<div id="header">
+    <img class="headLogo pull_left" src="../src/img/gd_img.JPG">
+    <div id="headContent" class="pull_left position_abs">
+        <ul>
+            <li id="headChinese">“建筑文化遗产传承信息技术”文化和旅游部重点实验室</li>
+            <li id="headEnglish">
+                <p>Information Technoogy for the Conservation and Inheritance of Architecture Cultural
+                    Heritage Laboratory by the Ministry of Culture and Tourism
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul class="pull_left">
+            <li class="headBtn pull_left position_abs" id="indexPageBtn">
+                <div>
+                    <img class="icon pull_left" src="../src/img/home.png">
+                    <p>首页</p>
+                    <p>Home</p></div>
+            </li>
+            <li class="headBtn pull_left position_abs" id="mapPageBtn">
+                <div>
+                    <img class="icon pull_left" src="../src/img/map.png">
+                    <p class="textChinese">地图</p>
+                    <p class="textEnglish">Map</p>
+                </div>
+            </li>
+            <li class="headBtn pull_left position_abs" id="registerPageBtn">
+                <div>
+                    <img class="icon pull_left" src="../src/img/register.png">
+                    <p>注册</p>
+                    <p>register</p>
+                </div>
+            </li>
+            <li class="headBtn pull_left position_abs activate" id="loginPageBtn">
+                <div>
+                    <img class="icon pull_left" src="../src/img/login.png">
+                    <p>登录</p>
+                    <p>login</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="registerLogoLeft">
+    <img id="registerLogoSize" src="img/gd_img.JPG">
+    <div class="linkCrow pull_right position_abs" id="registerLogoLine"></div>
+</div>
+<div id="registerWriteArea" class="position_abs">
+    <h3>用户登录</h3>
+    <ul>
+        <li class="registerEveryCell"><p>用户名：</p>
+            <input class="registerInput pull_right position_rel" placeholder="请输入用户名"></input></li>
+        <li class="registerEveryCell"><p>密码：</p>
+            <input class="registerInput pull_right position_rel" type="password" placeholder="请输入密码"></input></li>
+        <li class="registerEveryCell"><p>验证码：</p>
+            <input class="pull_right position_rel" id="registerCheck"></input>
+            <img class="pull_right position_rel" src="img/gd_img.JPG" id="registerCheckImg">
+            <a href="" class="pull_right position_rel"id="registerCheckImgChange">看不清，换一张</a>
+        </li>
+        <li class="registerEveryCell">
+            <label><input type="checkbox">记住用户名</label>
+            <button id="loginForgetPW" class="pull_right position_rel">忘记密码？</button>
+        </li>
+        <li class="registerEveryCell"><button class="bigBtn">登录</button></li>
+        <li class="registerEveryCell">
+            <span>没有账号？</span>
+            <a href="dataset_06_01_register.html" id="">立即注册</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

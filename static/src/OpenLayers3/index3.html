@@ -1,0 +1,156 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ol3 select</title>
+    <link rel="stylesheet" type="text/css" href="../package/v3.19.0-dist/ol.css"/>
+    <style type="text/css">
+        body, #map {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            font-size: 13px;
+        }
+        .form-inline{
+            position: absolute;
+            top: 10pt;
+            right: 10pt;
+            z-index: 99;
+        }
+    </style>
+    <script type="text/javascript" src="../package/v3.19.0-dist/ol.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        var point = "POINT(103.584297498027 36.119086450265)";
+        var line = "MULTILINESTRING((106.519115206186 36.119086450265,108.967127809811 36.5936423859273))";
+        var polygon = "MULTIPOLYGON(((106.519115206186 29.4789248520356,108.967127809811 34.2761116373967,113.226682886935 23.1830703234799)))";
+        var wkts = [point, line, polygon];
+        var wktformat = new ol.format.WKT();
+        function init(){
+            var format = 'image/png';
+            var bounds = [73.4510046356223, 18.1632471876417,
+                134.976797646506, 53.5319431522236];
+            var untiled = new   ol.layer.Tile({
+                source: new ol.source.OSM()
+            });
+            var projection = new ol.proj.Projection({
+                code: 'EPSG:4326',
+                units: 'degrees'
+            });
+            var features = new Array();
+            for(var i=0;i<wkts.length;i++){
+                var feature = wktformat.readFeature(wkts[i]);
+                feature.getGeometry().transform('EPSG:4326', 'EPSG:4326');
+                features.push(feature);
+            }
+            var vectorSource =new ol.source.Vector({
+                features: features
+            })
+            var vector = new ol.layer.Vector({
+                source: vectorSource,
+                style: new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(255, 0, 0, 0.2)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#ffcc33',
+                        width: 2
+                    }),
+                    image: new ol.style.Circle({
+                        radius: 7,
+                        fill: new ol.style.Fill({
+                            color: '#ffcc33'
+                        })
+                    })
+                })
+            });
+            var map = new ol.Map({
+                controls: ol.control.defaults({
+                    attribution: false
+                }),
+                target: 'map',
+                layers: [
+                    untiled, vector
+                ],
+                view: new ol.View({
+                    projection: projection
+                })
+            });
+            map.getView().fit(bounds, map.getSize());
+
+            //选择对象
+            var select = null;
+            //单选
+            var pointSelect = new ol.interaction.Select();
+            //多选
+            var toggleSelect = new ol.interaction.Select({
+                condition:ol.events.condition.click,
+                toggleCondition:ol.events.condition.click
+            });
+            //鼠标经过
+            var pointmove = new ol.interaction.Select({
+                condition: ol.events.condition.pointerMove
+            });
+            //框选
+            var boxSelect = new ol.interaction.Select();
+            var selectedFeatures = boxSelect.getFeatures();
+            var dragBox = new ol.interaction.DragBox({
+                //condition : ol.events.condition.always  默认是always
+            });
+            map.addInteraction(dragBox);
+            dragBox.on('boxend', function() {
+                var extent = dragBox.getGeometry().getExtent();
+                vectorSource.forEachFeatureIntersectingExtent(extent, function(
+                    feature) {
+                    selectedFeatures.push(feature)
+                });
+                console.log(extent);
+            });
+            dragBox.on('boxstart', function() {
+                selectedFeatures.clear();
+            });
+            map.on('click', function() {
+                selectedFeatures.clear();
+            });
+            var selectElement = document.getElementById('selecttype');
+            var changeInteraction = function() {
+                if (select !== null) {
+                    map.removeInteraction(select);
+                }
+                var value = selectElement.value;
+                if (value == 'pointSelect') {
+                    select = pointSelect;
+                } else if (value == 'boxSelect') {
+                    select = boxSelect;
+                } else if (value == 'pointmove') {
+                    select = pointmove;
+                } else if (value == 'toggleSelect') {
+                    select = toggleSelect;
+                }else {
+                    select = null;
+                }
+                if (select !== null) {
+                    map.addInteraction(select);
+                }
+            };
+            selectElement.onchange = changeInteraction;
+            changeInteraction();
+        }
+    </script>
+</head>
+<body onLoad="init()">
+<div id="map">
+    <form class="form-inline">
+        <label>选择高亮方式：</label>
+        <select id="selecttype">
+            <option value="none" selected>None</option>
+            <option value="pointSelect">点选</option>
+            <option value="toggleSelect">多选</option>
+            <option value="boxSelect">框选</option>
+            <option value="pointmove">鼠标经过</option>
+        </select>
+    </form>
+</div>
+</body>
+</html>

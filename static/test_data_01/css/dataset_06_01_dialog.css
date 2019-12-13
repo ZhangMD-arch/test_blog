@@ -1,0 +1,63 @@
+/*对话框的属性设置*/
+.Dialog{
+    position: absolute;
+    z-index: 999;
+    width: 500px;
+    height: 300px;
+    background: white;
+    border: solid 1px #000;
+    left: 500px;
+    top: 200px;
+}
+
+/*对话框的标题栏*/
+.title_Dialog{
+    background-color: antiquewhite;
+    cursor: move;
+    height: 30px;
+}
+
+.Dialog_btn{
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*缩小按钮*/
+.DialogToBtn{
+    right: 30px;
+    margin-right: 20px;
+}
+/*关闭按钮*/
+.DialogClose{
+    right:0;
+    margin-right: 20px;
+}
+
+/*属性展示对话框的样式*/
+.show_table{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*查询对象选择*/
+#popSelectTable{
+    margin: 10px 10px 10px 40px;
+}
+
+/*搜索名称*/
+#search_name{
+    width: 100px;
+}
+/*检索确认键*/
+#search_btn{
+    width: 60px;
+}
+
+/*编辑区域和图标区域分割线*/
+.linkRow{
+    width:auto;
+    margin:10px;
+    border-top: solid #ACC0D8 1px;
+}

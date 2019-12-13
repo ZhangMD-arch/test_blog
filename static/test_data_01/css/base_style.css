@@ -1,0 +1,64 @@
+*{
+     margin: 0;
+     padding: 0;
+ }
+.pull_left{
+    float: left;
+}
+.pull_right{
+    float: right;
+}
+li{
+    list-style: none;
+}
+.position_abs{
+    position: absolute;
+}
+
+.position_rel{
+    position: relative;
+}
+
+/*块元素居中*/
+.box_marginCenter{
+    margin:0 auto;
+}
+ul{
+    margin: 0;
+}
+/*定位在下部的元素*/
+.ol_bottom{
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    /*width: 100%;*/
+}
+.ol_bottom_right{
+    position: relative;
+    /*right: 50px;*/
+    left:1200px;
+    bottom: 110px;
+    height:200px;
+    width:400px;
+    /*left: 1000px;*/
+    /*left:1400px;*/
+}
+.ol_map_type_cell{
+    float: right;
+    width:100px;
+    height: 100px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.display_none{
+    display: none;
+}
+.display_block{
+    display: block;
+}
+
+.bigBtn{
+    width: 270px;
+    height: 30px;
+}

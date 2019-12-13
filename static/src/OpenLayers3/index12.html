@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>简易灯箱画廊设计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*<--清除底部三像素距离-->*/
+        img {
+            vertical-align: top;
+        }
+
+        .all {
+            width: 550px;
+            height: 320px;
+            margin: 100px auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .inner {
+            position: relative;
+            width: 550px;
+            height: 320px;
+            background-color: pink;
+            overflow: hidden;
+        }
+
+        .inner ul {
+            width: 1000%;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .inner ul li {
+            float: left;
+        }
+
+        .focusD {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 550px;
+            padding: 0 10px;
+            height: 30px;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .inner ol {
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+
+        .inner ol li {
+            width: 15px;
+            display: inline-block;
+            height: 15px;
+            margin: 0 3px;
+            cursor: pointer;
+            line-height: 15px;
+            text-align: center;
+            background-color: #fff;
+        }
+        /*当前的高亮的小圆点*/
+        .inner ol .current {
+            background-color: orange;
+            color: #fff;
+        }
+
+        .focusD span {
+            display: inline-block;
+            width: 25px;
+            font-size: 24px;
+            height: 30px;
+            color: #ccc;
+            line-height: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+
+        #left {
+            float: left;
+        }
+
+        #right {
+            float: right;
+        }
+    </style>
+</head>
+<body >
+<div id="box" class="all">
+    <div class="inner">  <!-- 相框-->
+        <ul>
+            <li><a href="#"><img src="images/18.jpg" width="550" height="320" alt=""></a></li>
+            <li><a href="#"><img src="images/19.jpg" width="550" height="320" alt=""></a></li>
+            <li><a href="#"><img src="images/14.jpg" width="550" height="320" alt=""></a></li>
+            <li><a href="#"><img src="images/17.jpg" width="550" height="320" alt=""></a></li>
+
+        </ul>
+        <ol> <!--里面存放小圆点-->
+
+        </ol>
+    </div>
+    <div class="focusD" id="arr">
+        <span id="left"><</span>
+        <span id="right">></span>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function myfunction(x){                          //改变展示框的图片和被选中展示图片的边框
+        document.getElementById("spic").src=x.src;
+        x.style.borderBottom="5px solid red";
+    }
+    function myfunction1(x){     //消除未选择的边框属性
+        x.style.border="none";
+    }
+</script>
+</html>

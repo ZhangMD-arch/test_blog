@@ -1,0 +1,263 @@
+<!--元素修改成功-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"> <!--http-equiv="Access-Control-Allow-Oringin" content="http://localhost"-->
+    <link rel="stylesheet" href="ol.css" type="text/css">
+    <style>
+        .map { height: 400px; width: 100%;}
+    </style>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="ol.js" type="text/javascript"></script>
+    <title>OpenLayers example</title>
+</head>
+<body>
+<div id="map" class="map"></div>
+<div>
+<!--    &lt;!&ndash; 关于维也纳信息的点击标签 &ndash;&gt;-->
+<!--    <a class="overlay" id="vienna" target="_blank" href="http://en.wikipedia.org/wiki/Vienna">Vienna</a>-->
+<!--    <div id="marker" title="Marker"></div>-->
+    <!-- 弹窗 -->
+    <div id="popup" title="Welcome to OpenLayers"></div>
+
+</div>
+<input type="button" name="home" value="home" onclick="select_home()">
+<input type="button" name="road" value="road" onclick="select_road()">
+<input type="text" id="save_type">
+<div id="info"></div>
+<script>
+    function wfs(name){
+        var wfsParams = {
+            service : 'WFS',
+            version : '1.0.0',
+            request : 'GetFeature',
+            typeName : name,  //图层名称
+            outputFormat : 'text/javascript',  //重点，不要改变
+            format_options : 'callback:loadFeatures'  //回调函数声明
+        };
+
+        var vectorSource = new ol.source.Vector({
+            format: new ol.format.GeoJSON(),
+            loader: function(extent, resolution, projection) {  //加载函数
+                var url = 'http://localhost:8080/geoserver/wfs';
+                $.ajax({
+                    url: url,
+                    data : $.param(wfsParams),   //传参
+                    type : 'GET',
+                    dataType: 'jsonp',   //解决跨域的关键
+                    jsonpCallback:'loadFeatures'  //回调
+                });
+            },
+            strategy: ol.loadingstrategy.tile(new ol.tilegrid.createXYZ({
+                maxZoom: 25
+            })),
+            projection: 'EPSG:4326'
+        });
+        //回调函数使用
+        window.loadFeatures = function(response) {
+           vectorSource.addFeatures((new ol.format.GeoJSON({
+               geometryName:'geom'//改成geom，要素则不显示在界面上
+           })).readFeatures(response));  //载入要素
+           //      var features=(new ol.format.GeoJSON()).readFeatures(response,{
+           //          dataProjection: 'EPSG:4326',    // 设定JSON数据使用的坐标系
+           //          featureProjection: 'EPSG:4326' // 设定当前地图使用的feature的坐标系
+           //      });
+           //      vectorSource.addFeatures(features);  //载入要素
+                // for(var i=0;i<features.length;i++){
+                //     console.log(features[i].getGeometryName());
+                // }
+        };
+        var vectorLayer = new ol.layer.Vector({
+            source: vectorSource,
+            style: new ol.style.Style({
+                image: new ol.style.Circle({
+                    radius: 15,
+                    fill: new ol.style.Fill({
+                        color: 'red'
+                    })
+                    // ,
+                    // stroke: new ol.style.Stroke({color: 'red', width: 20})
+                })
+            })
+        });
+        return vectorLayer;
+    }
+
+    var format = 'image/png';
+    var bounds = [73.441277, 18.159829,
+        135.08693, 53.561771];
+    var untiled = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            ratio: 1,
+            url: 'http://localhost:8080/geoserver/GreateWall/wms',
+            params: {'FORMAT': format,
+                'VERSION': '1.1.1',
+                "LAYERS": 'GreateWall:%E7%9C%81%E7%95%8C_region',
+                "exceptions": 'application/vnd.ogc.se_inimage',
+            }
+        })
+    });
+    var tiled = new ol.layer.Tile({
+        visible: false,
+        source: new ol.source.TileWMS({
+            url: 'http://localhost:8080/geoserver/GreateWall/wms',
+            params: {'FORMAT': format,
+                'VERSION': '1.1.1',
+                tiled: true,
+                "LAYERS": 'GreateWall:%E7%9C%81%E7%95%8C_region',
+                "exceptions": 'application/vnd.ogc.se_inimage',
+                tilesOrigin: 73.441277 + "," + 18.159829
+            }
+        })
+    });
+
+    var wfs_layer = null;
+
+    function clcall(){
+        if(wfs_layer){
+            map.removeLayer(wfs_layer);
+            wfs_layer = null;
+        }
+    }
+
+    function select_home(){
+        var name = 'GreateWall:selected';
+        clcall();
+        wfs_layer = wfs(name);
+
+        map.addLayer(untiled);//wms调用地图切片
+        map.addLayer(tiled);
+
+        map.addLayer(wfs_layer);
+
+    }
+
+    function select_road(){
+        var name = 'map:road';
+        clcall();
+        wfs_layer = wfs(name);
+        map.addLayer(wfs_layer);
+    }
+
+
+    var baseLayer = new ol.layer.Tile({
+        source: new ol.source.OSM()
+    });
+
+    var map = new ol.Map({
+        // layers: [baseLayer],
+        target: document.getElementById('map'),
+        view: new ol.View({
+            center: [98.23584, 39.84159],// ol.proj.transform([98.23584, 39.84159], 'EPSG:4326','EPSG:3857'),
+            projection: 'EPSG:4326',
+            maxZoom: 19,
+            zoom: 2
+        })
+    });
+
+    //实现高亮显示
+    var featureOverlay = new ol.layer.Vector({
+        source: new ol.source.Vector(),
+        map: map,
+        style: new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: 5,
+                fill: null,
+                stroke: new ol.style.Stroke({color: 'red', width: 20})
+            })
+        })
+    });
+
+    var highlight;
+    var displayFeatureInfo = function(pixel) {
+        var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+            return feature;
+        });
+        console.log(feature);
+        var info = document.getElementById('info');
+        if (feature) {
+            info.innerHTML = feature.getId() + '<br>';
+            var keys = feature.getKeys();
+            var properties = feature.getProperties();
+            for (var i = 0;i<keys.length;i++)
+            {
+                info.innerHTML += keys[i] + ' ： ';
+                info.innerHTML += properties[keys[i]] + '<br>';
+            }
+        } else {
+            info.innerHTML = ' ';
+        }
+        if (feature !== highlight) {
+            if (highlight) {
+                featureOverlay.getSource().removeFeature(highlight);
+            }
+            if (feature) {
+                featureOverlay.getSource().addFeature(feature);
+            }
+            highlight = feature;
+        }
+    };
+
+    function modifyWfs(pixel) {
+        var features = map.forEachFeatureAtPixel(pixel, function(feature) {
+            return feature;
+        });
+        if (features) {
+            var save_type=document.getElementById('save_type').value;
+            var test=features.setProperties({'save_condition':save_type});//.getProperties()['保存状'].
+
+            var WFSTSerializer = new ol.format.WFS();
+
+            features.getGeometry().applyTransform(function (flatCoordinates,flatCoordinates2,stride) {
+                for (var j=0;j<flatCoordinates.length;j+=stride){
+                    var y = flatCoordinates[j];
+                    var x = flatCoordinates[j + 1];
+                    flatCoordinates[j] = x;
+                    flatCoordinates[j + 1] = y;
+                  }
+            });
+
+            var featObject = WFSTSerializer.writeTransaction(null,
+                [features], null, {//插入，修改，删除
+                    featureType: 'selected',//nyc_roads
+                    featureNS: 'http://localhost:8080/GreateWall',  // 注意这个值必须为创建工作区时的命名空间URI
+                    srsName: 'EPSG:4326'
+                    // ,
+                    // username:'postgres',
+                    // password:'123456'
+                });
+            // 转换为xml内容发送到服务器端
+            var serializer = new XMLSerializer();
+            // console.log(featObject);
+            var featString = serializer.serializeToString(featObject);
+            // console.log(featString);
+            var request = new XMLHttpRequest();
+            request.open('POST', 'http://localhost:8080/geoserver/wfs?service=wfs');
+            // 指定内容为xml类型
+            request.setRequestHeader('Content-Type', 'text/xml');
+            request.send(featString);
+            // console.log(request);
+        }
+    }
+
+    // map.on('pointermove', function(evt) {
+    //   if (evt.dragging) {
+    //     return;
+    //   }
+    //   var pixel = map.getEventPixel(evt.originalEvent);
+    //   displayFeatureInfo(pixel);
+    // });
+
+    map.on('click', function(evt) {
+        console.log(evt.pixel);
+        displayFeatureInfo(evt.pixel);
+        modifyWfs(evt.pixel);
+        select_home();
+    });
+    // map.on('click',function (evt) {
+    //     modifyWfs(evt.pixel);
+    // })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1658 @@
+/*所有图标的样式文件*/
+#cob_wall_color{
+    background: #008000;
+    width: 10px;
+    height: 10px;
+}
+#stone_wall_color{
+    background: #804040;
+    width: 10px;
+    height: 10px;
+}
+#precipitous_color{
+    background: #000000;
+    width: 10px;
+    height: 10px;
+}
+#precipitous_wall_color{
+    background: #FF8080;
+    width: 10px;
+    height: 10px;
+}
+#brick_wall_color{
+    background: #808000;
+    width: 10px;
+    height: 10px;
+}
+#disappear_wall_color{
+    background: #808080;
+    width: 10px;
+    height: 10px;
+}
+#risk_river_color{
+    background: #00FFFF;
+    width: 10px;
+    height: 10px;
+}
+#other_wall_color{
+    background: #FF80FF;
+    width: 10px;
+    height: 10px;
+}
+/*.jizhen_ul{*/
+/*    list-style: none;*/
+/*    padding-left: 0px;!*内边距：元素边框线以内的距离，负值没有效果*!*/
+/*    margin: 0;  !*外边距：元素边框线以外的距离，可设置负值，向相反方向移动*!*/
+/*}*/
+
+.third_child{
+    display: none;
+    margin-left: 20px;
+}
+
+#all_vis_unvis{
+    position: absolute;
+    /*left: 30px;*/
+    top: 0;
+    /*padding-left: 30px;*/
+    /*padding-top: 20px;*/
+    /*border: black solid 1px;*/
+    height: 100px;
+    margin-top: 20px;
+}
+
+#all_vis_unvis input{
+    margin-right: 8px;
+}
+
+.vis_unvis{
+    display: inline-block;
+    position: relative;
+    right: 5px;
+}
+#vis_jizhen{
+    padding-left: 10px;
+}
+
+/*辽东镇*/
+#circle_liaodong{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_liaodong:after{
+    content: "n";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 1px;
+    bottom: 8px;
+}
+
+#circle_aiyang{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_aiyang:after{
+    content: "1";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guangning{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guangning:after{
+    content: "2";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_kaiyuan{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_kaiyuan:after{
+    content: "3";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*#circle_liaoyang{*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    background-color: white;*/
+/*    border-radius: 10px;*/
+/*    border: 2px solid #FF8040;*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    top: 5px;*/
+/*}*/
+/*#circle_liaoyang:after{*/
+/*    content: "4";*/
+/*    color: #FF8040;*/
+/*    font-weight: 800;*/
+/*    font-size: 10px;*/
+/*    position: relative;*/
+/*    left: 2px;*/
+/*    bottom: 8px;*/
+/*}*/
+
+#circle_qiantun{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_qiantun:after{
+    content: "4";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_yizhou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF8040;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_yizhou:after{
+    content: "5";
+    color: #FF8040;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*蓟镇*/
+#circle_jizhen{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen:after{
+    content: "n";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 1px;
+    bottom: 8px;
+}
+
+#circle_jizhen_shanhai{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_shanhai:after{
+    content: "1";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_shimen{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_shimen:after{
+    content: "2";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_taitou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_taitou:after{
+    content: "3";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_yanhe{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_yanhe:after{
+    content: "4";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_taiping{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_taiping:after{
+    content: "5";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_malan{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_malan:after{
+    content: "6";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_xifeng{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_xifeng:after{
+    content: "7";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_songpeng{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_songpeng:after{
+    content: "8";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_qiangzi{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_qiangzi:after{
+    content: "9";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_gubeikou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_gubeikou:after{
+    content: "0";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_shitang{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_shitang:after{
+    content: "A";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_jizhen_caojia{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_jizhen_caojia:after{
+    content: "B";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+/*宣府镇*/
+#circle_xuanfu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu:after{
+    content: "n";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_bushulu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_bushulu:after{
+    content: "1";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_shangxilu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_shangxilu:after{
+    content: "2";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_xiaxilu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_xiaxilu:after{
+    content: "3";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_shangbeilu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_shangbeilu:after{
+    content: "4";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_xiabeilu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_xiabeilu:after{
+    content: "5";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_zhonglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_zhonglu:after{
+    content: "6";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_east:after{
+    content: "7";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_south{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_south:after{
+    content: "8";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_xuanfu_nanshan{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_xuanfu_nanshan:after{
+    content: "9";
+    color: #008000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*大同镇*/
+#circle_datong{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong:after{
+    content: "n";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_xinping{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_xinping:after{
+    content: "1";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_east:after{
+    content: "2";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_north_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_north_east:after{
+    content: "3";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_north_west{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_north_west:after{
+    content: "4";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_zhonglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_zhonglu:after{
+    content: "5";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_weiyuan{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_weiyuan:after{
+    content: "6";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_west{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_west:after{
+    content: "7";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_jingping{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_jingping:after{
+    content: "8";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_datong_bushulu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0000FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_datong_bushulu:after{
+    content: "9";
+    color: #0000FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*山西镇*/
+#circle_shanxi{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi:after{
+    content: "n";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shanxi_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi_east:after{
+    content: "1";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shanxi_beilou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi_beilou:after{
+    content: "2";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shanxi_zhonglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi_zhonglu:after{
+    content: "3";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shanxi_west{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi_west:after{
+    content: "4";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shanxi_hebao{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #FF80FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shanxi_hebao:after{
+    content: "5";
+    color: #FF80FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*榆林镇*/
+#circle_yulin{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #800000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_yulin:after{
+    content: "n";
+    color: #800000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_yulin_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #800000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_yulin_east:after{
+    content: "1";
+    color: #800000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_yulin_zhonglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #800000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_yulin_zhonglu:after{
+    content: "2";
+    color: #800000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_yulin_west{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #800000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_yulin_west:after{
+    content: "3";
+    color: #800000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*固原镇*/
+#circle_guyuan{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan:after{
+    content: "n";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+
+#circle_guyuan_xiamafang{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan_xiamafang:after{
+    content: "1";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guyuan_jinglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan_jinglu:after{
+    content: "2";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guyuan_lanzhou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan_lanzhou:after{
+    content: "3";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guyuan_hezhou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan_hezhou:after{
+    content: "4";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guyuan_lutang{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #8080FF;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guyuan_lutang:after{
+    content: "5";
+    color: #8080FF;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*宁夏镇*/
+#circle_ningxia{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia:after{
+    content: "n";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_ningxia_east{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia_east:after{
+    content: "1";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_ningxia_zhonglu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia_zhonglu:after{
+    content: "2";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_ningxia_north{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia_north:after{
+    content: "3";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_ningxia_south{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia_south:after{
+    content: "4";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_ningxia_west{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #808000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_ningxia_west:after{
+    content: "5";
+    color: #808000;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*甘肃镇*/
+#circle_gansu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu:after{
+    content: "n";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gansu_zhuanglang{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu_zhuanglang:after{
+    content: "1";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gansu_dajing{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu_dajing:after{
+    content: "2";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gansu_liangzhou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu_liangzhou:after{
+    content: "3";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gansu_zhenyu{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu_zhenyu:after{
+    content: "4";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gansu_suzhou{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #80FF80;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gansu_suzhou:after{
+    content: "5";
+    color: #80FF80;
+    font-weight: 800;
+    font-size: 10px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*墙上单体*/
+#circle_enemy_tower{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_enemy_tower:after{
+    content: "F";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_horse_face{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_horse_face:after{
+    content: "+";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_water_door_on_wall{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_water_door_on_wall:after{
+    content: "C";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_gate_tower{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_gate_tower:after{
+    content: ">";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_shop_room{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_shop_room:after{
+    content: "@";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_smoke_tower{
+    width: 10px;
+    height: 10px;
+    color: #ff0000;
+    /*font-weight: 800;*/
+    /*font-size: 8px;*/
+    /*background-color: white;*/
+    /*border: 2px solid #ff0000;*/
+    display: inline-block;
+    position: relative;
+}
+
+#circle_secret_door{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_secret_door:after{
+    content: "s";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*墙外单体*/
+#circle_out_wall_pier{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_out_wall_pier:after{
+    content: "P";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_out_wall_smoke_tower{
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid #00FF00;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: inline-block;
+    position: relative;
+}
+
+#circle_out_wall_other_arch{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_out_wall_other_arch:after{
+    content: ")";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+/*关隘*/
+#circle_guanai_water_door{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#circle_guanai_water_door:after{
+    content: "c";
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8px;
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+#circle_guanai_door_city{
+    width: 10px;
+    height: 10px;
+    color: #ff0000;
+    display: inline-block;
+    position: relative;
+}
+
+#circle_guanai_door_pass{
+    width: 10px;
+    height: 10px;
+    color: #ff0000;
+    display: inline-block;
+    position: relative;
+}

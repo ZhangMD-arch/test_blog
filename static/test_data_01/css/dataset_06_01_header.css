@@ -1,0 +1,60 @@
+#header{
+    height: 60px;
+    /*width: 100%;*/
+    width: 1700px;
+    background-color: rgba(211,139,114,0.5);
+}
+.headLogo{
+    width: 80px;
+    height: 60px;
+}
+#headContent{
+    left: 130px;
+    top: 10px;
+}
+/*#header ul{*/
+/*    list-style: none;*/
+/*}*/
+#headChinese{
+    font-size: 16px;
+}
+#headEnglish{
+    margin-left: 20px;
+    font-size: 10px;
+}
+#indexPageBtn{
+    left: 1000px;
+}
+#mapPageBtn{
+    left:1100px;
+}
+#registerPageBtn{
+    left: 1200px;
+}
+#loginPageBtn{
+    left: 1300px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.headBtn{
+    float: left;
+    height: 60px;
+    width: 100px;
+}
+.headBtn:hover{
+    background-color: rgba(211,139,114,1);
+    cursor: pointer;
+}
+.headBtn p{
+    font-size: 12px;
+}
+.headBtn div{
+    margin: 10px;
+}
+.activate{
+    background-color: rgba(211,139,114,1);
+}

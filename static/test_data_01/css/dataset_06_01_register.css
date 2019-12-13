@@ -1,0 +1,79 @@
+#registerLogoLeft{
+    position: absolute;
+    left: 200px;
+    top:130px;
+    width: 300px;
+    height: 500px;
+}
+#registerLogoSize{
+    width: 250px;
+    height: 410px;
+}
+/*编辑区域和图标区域分割线*/
+.linkCrow{
+    height:410px;
+    width: 2px;
+    margin:10px;
+    border-left: solid #ACC0D8 2px;
+}
+#registerLogoLine{
+    left:300px;
+    top:0;
+}
+/*用户右侧注册输入内容区域，绝对定位*/
+#registerWriteArea{
+    top:130px;
+    left:630px;
+    width:300px;
+    height: 500px;
+}
+/*注册区域每一行的行间距等属性*/
+.registerEveryCell{
+    margin-top: 30px;
+}
+
+/*注册对话框属性*/
+.registerInput{
+    width: 180px;
+    height: 30px;
+    top:-40px;
+    left:-30px;
+}
+
+/*验证码*/
+#registerCheck{
+    width: 90px;
+    height: 30px;
+    top:-40px;
+    left:-120px;
+}
+
+/*验证码图片*/
+#registerCheckImg{
+    width: 80px;
+    height: 30px;
+    top:-40px;
+    left: 60px;
+}
+/*更换验证码图片*/
+#registerCheckImgChange{
+    left: 150px;
+}
+
+/*忘记密码按钮*/
+#loginForgetPW{
+    left: -60px;
+    top: -30px;
+    width: 100px;
+    height: 30px;
+}
+
+/*!*职业性质选择*!*/
+/*#registerJobSelect{*/
+/*    top:-40px;*/
+/*    left:-30px;*/
+/*    width: 180px;*/
+/*    height: 30px;*/
+/*}*/
+
+

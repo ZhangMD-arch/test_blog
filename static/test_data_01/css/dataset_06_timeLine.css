@@ -1,0 +1,127 @@
+/*时间栏*/
+#timeLineArea{
+    position: relative;
+    top:130px;
+    left:1300px;
+}
+#timeLine{
+    top: 0;
+    z-index: 100;
+    /*left: 0;*/
+    height:100px;
+    border:0;
+    right: 0;
+    /*left:-100px;*/
+    margin-left: 310px;
+    /*padding-left: 310px;*/
+    /*min-width: 1600px;*/
+    /*width: 100%;*/
+    /*max-width: 1490px;*/
+    width:1390px;
+    /*width: 981px;*/
+    /*border-left: 1px solid rgb(23, 32, 43);*/
+    background-color: antiquewhite;
+    -moz-transition: margin 2s;
+    transition: margin 2s;
+}
+
+/*时间条上拉条*/
+#BtnTimeMenubtn{
+    z-index:100;
+    position: relative;
+    top:-220px;
+    left:-300px;
+    /*left: 900px;*/
+    height: 20px;
+    width: 75px;
+    border:0;
+    /*border: 1px solid rgb(23, 32, 43);*/
+    background-color: antiquewhite;
+    color: black;
+    /*cursor: pointer;!*光标属性*!*/
+    -moz-transition: margin 1s;
+    transition: margin 1s;
+    /*-moz-transition: margin-right 2s;*/
+    /*transition: margin-top 1s;*/
+}
+
+/*是否启用时间轴*/
+#useTimeLine{
+    left: 30px;
+}
+
+/*播放键位置*/
+#timeLinePlay{
+    left: 150px;
+}
+
+/*暂停键位置*/
+#timeLinePause{
+    left: 190px;
+}
+
+/*停止键位置*/
+#timeLineStop{
+    left: 230px;
+}
+
+#timeTableName{
+    top: 35px;
+    /*border: black solid 1px;*/
+    left: 25px;
+}
+
+#timeTableName tr td{
+    height: 20px;
+    font-size: 10px;
+}
+
+#timeTableAge{
+    top:80px;
+    left: 25px;
+}
+
+#timeTableAge tr td{
+
+    font-size: 10px;
+}
+
+/*时间轴*/
+#timeLineBar{
+    /*top:100px;*/
+    /*left:50px;*/
+    position: relative;
+    left: 20px;
+    right:-20px;
+    width: 1350px;
+
+    margin-top: 60px;
+
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 50px;
+    border: 1px solid #ddd;
+    /*border-radius: 5px;*/
+    overflow: hidden;
+}
+
+#timeLineBarColor{
+    position: relative;
+    background: #F0E68C;
+    width: 0;
+    height: 15px;
+    /*border-radius: 1px;*/
+    left: 0;
+}
+
+#timeLineBarBtn{
+    left: 20px;
+    width: 10px;
+    height: 15px;
+    background-color: 	#FFA500;
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    top: -15px;
+    cursor: pointer;
+}
